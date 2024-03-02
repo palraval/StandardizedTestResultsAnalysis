@@ -5,7 +5,7 @@ This project revolves around 2 data files containing student and school data for
 The paths of both the csv files are loaded located and then read using the "read_csv" function inside the pandas library. Both these datasets are merged together to create a single dataframe called 'school_data_complete' using the "school_name" column that is present in both data tables. 
 
 
-## ** Part I: District Analysis
+##  Part I: District Analysis
 The first portion of this analysis deals with analyzing the entire district and making a dataframe called 'district_summary' that contains all the district's metrics. The total number of schools, number of students, total budget, average math scores, average reading scores, percentage of students passing math, percentage of students passing reading, and percentage of students passing both are calculated and each make up a column in this dataframe. 
 
 ## ** Part II: Per School Analysis
