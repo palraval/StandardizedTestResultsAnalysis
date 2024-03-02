@@ -1,0 +1,45 @@
+This code starts with analyzing an entire district. The amount of schools, the number of students, the budget, the average
+math score, the average reading score, the percentage of students who passed math and reading, and the percentage of students
+who passed both are all calculated and put into a dataframe that represents the district's metrics. 
+
+After that, the school type, the student count, and the budget for each school is found. The capita for each school is then 
+found as well using the knowledge of budget and student count. The average math and reading scores are then found for each 
+school. The amount of students who pass math, pass reading, and pass both are then found. The passing rates for each school 
+are then calculated using the amount of students who pass math/reading/both and the total student count per school. All of 
+this summarized data is then put into a dataframe which gives the metrics for each school. 
+
+The five schools with the highest overall passing percentage are then found alongside the five schools with the lowest
+overall passing percentage. 
+
+The next part of the analysis involves splitting up the data into the grades (9th, 10th, 11th, 12th). The average math scores
+for each grade is found and this is all concatenated into a dataframe which ends up giving the average math scores for each
+grade per school. The exact same thing is done on the reading scores, so another dataframe containing the average reading 
+scores is created. 
+
+The next part of the analysis involves binning the data. Firstly, the binning is done according to the capita spending per
+school. A new column is created in a copied dataframe which classifies the "Per Student Budget" in terms of the spending
+ranges (<585, 585-630, 630-645, 645-680). The average math scores, reading scores, passing math percentage, passing reading
+percentage, and passing overall percentage is found for each of the range and placed in a new dataframe. This new dataframe 
+contains the spending summary and the respective scores. Another binning is done according to the school size. A new column
+is created which bins the "Total Students" column into the appropriate range(Small, Medium, and Large). The exact same 
+metrics as the first binning is done on this based on the school size. A new dataframe is then created which contains the
+averages of these metrics for each school size. 
+
+The last part of the analysis involves calculating the average math score, average reading score, passing math percentage,
+passing reading percentage, and passing overall percentage according to the school type(Charter and District). The values
+are then placed into another dataframe which contains the two school types and all the averages associated with them.
+
+From all of this, one conclusion that can be made is that "Charter" school type has higher scores across the board compared
+to the "District" school type. All of the means in the "Charter" row in the 'type_summary' dataframe are greater than the 
+values in the "District" row. The largest difference seems to be in the "% Overall Passing" column. The mean for "Charter"
+is 90.43, while the mean for the "District" is 53.67. In more digestible terms, this indicates that students who study at 
+Charter schools tend to pass more in both reading and math compared to students who study at District schools. A second 
+conclusion that can be drawn is by looking at the 'size_summary' dataframe. From this, we see that there is very little
+difference in any of the scores in the small and medium school groups. However, there is a noticeable difference in scores
+for the large school groups. The larger school groups seem to have lower averages in scores than both the small and medium
+schools. The difference in the small and medium groups have a difference of around 1.00, but the largest difference between
+the small and large schools is 31.60. In simpler terms, students studying at small or medium schools don't have much 
+difference in their averages scores, but the average scores are greatly difference for students attending large schools.
+Students at large schools have lower average scores across the board, with the overall passing percentage having the largest
+reduction in score average between large and small schools.   
+
